@@ -1,0 +1,108 @@
+# Linux
+현재 우리 연구실에서 사용하는 운영체제(OS)는 ubuntu 이다.
+
+cd <옮기고자 하는 위치>: 현재 위치를 옮길 수 있다.
+	. 현재 위치, .. 상위 디렉토리, ~ 기본 위치, ~username 해당 유저의 기본 위치
+
+pwd : 현재 위치 나타내기
+
+mkdir <directory name> : 디렉토리 생성
+
+mv <옮기고자 하는 대상> <옮기고자 하는 위치>
+cp [ -r ] <옮기고자 하는 대상> <옮기고자 하는 위치>
+    -r 옵션은 폴더를 옮길 때 사용. (주로 -r 은 강제적인 의미로 사용된다)
+
+rm [ -r ] <지우고자 하는 대상> : 해당 파일 혹은 폴더를 지울 수 있다.
+
+ps : 해당 터미널에서 실행되는 PID를 알 수 있다.
+
+jobs : ps와 유사하며 job number를 알 수 있다.
+
+kill [ -9 ] < pid | %Job number>
+	-9 옵션을 사용하면 강제적으로 죽이게 된다. ( 잘못된 사용에 대한 risk가 있다 )
+
+top : 시스템 사용 정보를 알 수 있다.
+
+sudo apt update ; sudo apt upgrade : 시스템을 업데이트, 업그레이드 할 수 있다.
+
+scp [ -r ] <옮기고자 하는 대상> username@hostname:<해당 컴퓨터의 옮기고자 하는 위치>
+
+
+
+#SSH
+ssh username@hostname
+username : 사용자 이름
+hostname : 컴퓨터 이름
+
+ex) ssh master ( cluster 접속 )
+
+
+#터미널 창   
+ctrl + shift + n : 새창 열기
+ctrl + shift + t : 새탭 열기
+alt + #(1,2,3,...) : 생성된 탭 중에 몇번째의 탭으로 갈지 선택할 수 있다.
+
+
+#SLURM
+sbatch <job script file>
+
+scancel --user <username> : username에 해당하는 모든 작업을 취소한다.
+
+squeue : 현재 
+
+slurmtop : slurm 전체 상황을 알 수 있다.
+
+
+#VIM editor (VI)
+vi <열고자 하는 파일 이름>
+
+vim은 모드 변환을 통해 사용된다. 모든 키 하나하나가 모드 변환을 의미 함으로 주의해야 한다.
+
+참조 - https://vim.rtorr.com/lang/ko/
+
+
+i - 삽입 모드로 진입한다. 해당 모드에서 나올 때는 'ESC' 혹은 'ctrl + [' 으로 나와야 한다.
+
+r - r 을 입력후 그 다음 키를 입력하면 그 해당 입력값으로 값이 변경된다.
+
+R  수정 모드로 진입한다.
+
+u - undo 윈도우의 'ctrl + z' 와 같은 역할을 한다.
+
+:w - 파일을 저장한다. 파일을 저장하게 되면 그 전으로 되돌릴 수 없으므로 신중해야한다.
+
+:q - vi 에서 나간다.
+
+:q! - 저장하지 않고 강제적으로 나간다.
+
+gf -
+
+
+
+#Tensorflow
+tensorflow 의 경우 1.13rc2 버전이 최신이며, CUDA10을 지원한다.
+
+pip을 통해 다운로드 할 수 있다.
+
+
+
+NVIDIA
+nvidia-smi : 현재 GPU 사용 정보를 알 수 있다.
+nvidia-smi -q : GPU 정보를 모두 알 수 있다.
+
+
+
+IP
+nmtui : Networkmanager text UI - IP 설정을 쉽게 해준다.
+
+
+
+Docking
+sphgen 이 실행이 안될 경우.. (에러 메세지가 #intel, #mkl 을 포함하는 경우)
+
+module load compiler/intel 을 이용해 intel compiler를 불러온다.
+
+module av 를 통해 불러올 수 있는 모듈을 확인 할 수 있다.
+
+
+grid.in 파일은 ~juyong/tmp/ 에 있다.
