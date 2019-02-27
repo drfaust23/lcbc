@@ -1,10 +1,10 @@
-##멀티프로세싱
+## 멀티프로세싱
 
 https://beomi.github.io/2017/07/05/HowToMakeWebCrawler-with-Multiprocess/
 
 python 내에 threading 과 multiprocessing 이 존재한다. threading의 경우 제약이 따르고 사용이 어렵다. multiprocessing의 경우 사용법이 그 보다 쉬우며 성능면에서도 더 좋다.
 
-
+```python3
 import time
 from multiprocessing import Pool # Pool import하기 대문자 P 임을 유의하자.
 
@@ -26,4 +26,4 @@ if __name__=='__main__':
 >               즉, get_content(get_links())
 
     print("--- %s seconds ---" % (time.time() - start_time))
-
+```
