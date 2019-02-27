@@ -22,8 +22,8 @@ if __name__=='__main__':
     pool = Pool(processes=4) # 4개의 프로세스를 사용합니다.
 
     pool.map(get_content, get_links())
->       get_content 함수 안에 get_links() 에서 return 되는 값을 넣어준다는 의미이다.
->               즉, get_content(get_links())
+    # get_content 함수 안에 get_links() 에서 return 되는 값을 넣어준다는 의미이다.
+    # 즉, get_content(get_links())
 
     print("--- %s seconds ---" % (time.time() - start_time))
 ```
