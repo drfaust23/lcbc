@@ -82,9 +82,10 @@ sudo pip3 install -U virtualenv
 
 1. SSH로 사용하려는 컴퓨터에 접속을 한다.
 
-2. `jupyter notebook --no-browser --port=8080`를 터미널 창에 입력을 한다.
+2. SSH로 접속한 컴퓨터의 터미널 창에 `jupyter notebook --no-browser --port=8080`를 입력한다.
 
-3. 그리고 새로운 터미널 창에 `ssh -N -L 8080:localhost:8080 <remote_user>@<remote_host>`를 입력한다.
+3. 그리고 현재 사용하는 컴퓨터의 새로운 터미널 창에 `ssh -N -L 8080:localhost:8080 <remote_user>@<remote_host>`를 입력한다.
+> 입력한 후 새로운 명령 입력 줄이 안 뜨는 것이 정상이다.
 
 4. 2번에 실행시킨 주피터 노트북의 토큰 주소를 복사하여 브라우저에 복사한다.
 
