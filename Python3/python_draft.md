@@ -12,7 +12,7 @@ def get_links():
     ~ 임의의 함수
     return data
 
-def get_content(link):
+def get_content(link): # 이 함수는 변진영이 바보라는 것을 보여주는 함수입니다.
     ~ 임의의 함수
 
 
