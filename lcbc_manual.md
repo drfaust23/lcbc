@@ -71,12 +71,11 @@ sudo apt install python3.<version> python3.<version>-venv
 
 3. 가상환경 이용
 `source ~/<venv_dir_name>/bin/activate`을 통해 가상환경을 활성화 할 수 있다.
-> 아까의 예를 사용한다면 `source ~/venv_py37/bin/activate`를 통해 가능하다.
-> 가상환경 상에서 `pip --version ; python --version`을 확인하면 설정했던 python version으로 실행이 된다.
-> 가상환경을 좀 더 편히 사용하기 위해 ~/.bashrc에 `alias <nickname>='source /home/yongbeom/venv_py37/bin/activate'`를 \
-추가한다. 그리고 `source ~/.bashrc`로 .bashrc 를 현재 환경에 업데이트 한 후, `<nickname>`을 사용하면 쉽게 가상환경을 사용할 수 있다.
+> 아까의 예를 사용한다면 `source ~/venv_py37/bin/activate`를 통해 가능하다.\
+> 가상환경 상에서 `pip --version ; python --version`을 확인하면 설정했던 python version으로 실행이 된다.\
+> 가상환경을 좀 더 편히 사용하기 위해 ~/.bashrc에 `alias <nickname>='source /home/yongbeom/venv_py37/bin/activate'`를 추가한다. 그리고 `source ~/.bashrc`로 .bashrc 를 현재 환경에 업데이트 한 후, `<nickname>`을 사용하면 쉽게 가상환경을 사용할 수 있다.
 
-4. 가상환경 탈출(?)
+4. 가상환경 탈출(?)\
 가상환경을 벋어나고자 한다면 `deactivate`를 command 창에 치면 나갈 수 있다.
 
 ### Jupyter notebook SSH를 통해 실행하기 !
@@ -123,16 +122,16 @@ Slurm 은 여러 컴퓨터에 효율적으로 작업을 조절하는 프로그�
 
 ## HARDWARE
 `nvidia-smi` 현재 장착된 GPU 정보를 알 수 있다.
-> -i,   --id=                 Target a specific GPU or Unit.
-> -pm,  --persistence-mode=   Set persistence mode: 0/DISABLED, 1/ENABLED
-> -pl   --power-limit=        Specifies maximum power management limit in watts
+> -i,   --id=                 Target a specific GPU or Unit.\
+> -pm,  --persistence-mode=   Set persistence mode: 0/DISABLED, 1/ENABLED\
+> -pl   --power-limit=        Specifies maximum power management limit in watts\
 
 `lscpu` CPU 정보를 알 수 있다.
 
 `lspci` 메인보드 정보를 알 수 있다.
 
 `arch` 아키텍처 확인.
-> x86_64 : x86을 지원하는 64-bit 환경.
+> x86_64 : x86을 지원하는 64-bit 환경.\
 > x86 : 32-bit 환경.
 
 `cat /etc/lsb-release` OS version 확인.
@@ -145,4 +144,4 @@ Ubuntu에서 문서 작성 후 프린트를 했을 때 문자가 정상적으로
 
 
 
-정답은 `/home/LCBC/ABC` 이다.
+~~정답은 `/home/LCBC/ABC` 이다.~~
