@@ -11,7 +11,7 @@
 해당 버전에 맞는 드라이버 다운 후 아래의 코드를 순차적으로 실행한다. (root로 실행한다.)
 ```
 mkdir -p /mnt/iso
-mount -o loop MLNX_OFED_LINUX-4.6-1.0.1.1-rhel7.6-x86_64.iso /mnt/iso
+mount -o ro,loop MLNX_OFED_LINUX-4.6-1.0.1.1-rhel7.6-x86_64.iso /mnt/iso
 cd /mnt/iso
 ./mlnxofedinstall
 ```
