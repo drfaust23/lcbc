@@ -16,10 +16,12 @@ cd /mnt/iso
 ./mlnxofedinstall
 ```
 
-설치 시간이 좀 걸린다.
-
-`/etc/init.d/openibd restart` 으로 인피니밴드 데몬을 재시작한다. 그리고 `reboot`.
+설치 시간이 좀 걸린다. 설치가 완료되면 `reboot` 한다.
 
 재부팅이 완료된 후 `hca_self_test.ofed` 및 `ibv_devinfo` 으로 드라이버 및 인피니 밴드 상태가 정상인지 확인한다.
+
+`systemctl`을 이용해 `master` 노드에서 `opensmd`가 정상적으로 작동되는지 확인한다. `openibd`는 모든 노드에서 켜져있어야 한다.
+
+ConnectX-3 의 경우 connected mode가 가능하며, ConnectX-4 모델의 경우 connected mode 를 지원하지 않는다.
 
 # 끝
