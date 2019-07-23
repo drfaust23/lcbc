@@ -127,3 +127,23 @@ Ubuntu에서 문서 작성 후 프린트를 했을 때 문자가 정상적으로
 
 
 ~~정답은 `/home/LCBC/ABC` 이다.~~
+
+## 파티션 설정
+`fdisk -l` 로 생성하려는 파티션을 확인한다.
+sdb를 파티션 설정 하려는 경우 `sudo fdisk /dev/sdb`로 설정 시작.
+Command : `n`
+Select : `p or e` 목적에 따라.
+Partition number : ``
+Sector 설정
+
+Command : `p`
+설정된 파티션 확인.
+
+Command : `w`
+저장 및 종료.
+
+`sudo mkfs.xfs -f /dev/sdb1`
+
+`sudo mount -t xfs /dev/sdb1 <target_dir>` xfs 포맷 이용.
+> `/etc/fstab`에서 설정 후 `sudo mount -a`를 이용하여도 된다.
+
